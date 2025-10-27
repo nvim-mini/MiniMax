@@ -202,7 +202,7 @@ later(function()
     -- to find textobject covering cursor, then try to find to the right.
     -- Although this works in most cases, some are confusing. It is more robust to
     -- always try to search only covering textobject and explicitly ask to search
-    -- for next (`an`/`in`) or last (`an`/`il`).
+    -- for next (`an`/`in`) or last (`al`/`il`).
     -- Try this. If you don't like it - delete next line and this comment.
     search_method = 'cover',
   })
