@@ -291,6 +291,7 @@ later(function()
       { mode = 'n', keys = '<Leader>' }, -- Leader triggers
       { mode = 'x', keys = '<Leader>' },
       { mode = 'n', keys = '\\' },       -- mini.basics
+      { mode = 'n', keys = 's' },        -- mini.surround
       { mode = 'n', keys = '[' },        -- mini.bracketed
       { mode = 'n', keys = ']' },
       { mode = 'x', keys = '[' },
