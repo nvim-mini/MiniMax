@@ -1,3 +1,7 @@
+## 2025-11-22
+
+- Update `<Leader>fs` mapping to use `"workspace_symbol_live"` scope for `:Pick lsp` instead of `"workspace_symbol"`
+
 ## 2025-10-16
 
 - Move `now_if_args` startup helper to 'init.lua' as `_G.Config.now_if_args` to be directly usable from other config files.

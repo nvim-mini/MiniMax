@@ -39,6 +39,7 @@ It is not a comprehensive guide on how to set up and use every Neovim feature an
 - Internet connection for downloading plugins.
 - (Optional, but recommended) [`ripgrep`](https://github.com/BurntSushi/ripgrep#installation).
 - (Optional, but recommended) Terminal emulator (or GUI) with [true colors](https://github.com/termstandard/colors#truecolor-support-in-output-devices) and [Nerd Font icons](https://www.nerdfonts.com/) support. No need for a full Nerd font, using [`NerdFontsSymbolsOnly`](https://github.com/ryanoasis/nerd-fonts/releases/latest) as a fallback is usually enough.
+- (Optional, but recommended) System requirements for [`main` branch of 'nvim-treesitter/nvim-treesitter' plugin](https://github.com/nvim-treesitter/nvim-treesitter/tree/main?tab=readme-ov-file#requirements).
 
 #### Knowledge
 
