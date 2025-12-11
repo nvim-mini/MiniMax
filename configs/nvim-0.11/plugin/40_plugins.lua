@@ -9,7 +9,7 @@
 -- Use this file to install and configure other such plugins.
 
 -- Make concise helpers for installing/adding plugins in two stages
-local add, later = MiniDeps.add, MiniDeps.later
+local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 local now_if_args = _G.Config.now_if_args
 
 -- Tree-sitter ================================================================
@@ -162,7 +162,7 @@ later(function()
   require('hardtime').setup({})
 end)
 
-now_if_args(function()
+now(function()
   add({
     source = 'nvim-neo-tree/neo-tree.nvim',
     checkout = 'v3.x',
@@ -170,6 +170,11 @@ now_if_args(function()
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
       "nvim-tree/nvim-web-devicons", -- optional, but recommended
+    }
+  })
+  require("neo-tree").setup({
+    window = {
+      width = 25
     }
   })
 end)
