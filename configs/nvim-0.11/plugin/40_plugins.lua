@@ -151,3 +151,25 @@ later(function() add('rafamadriz/friendly-snippets') end)
 --   vim.cmd('color everforest')
 -- end)
 
+-- My Plugins =================================================================
+
+later(function()
+  add({
+    source = "m4xshen/hardtime.nvim",
+    depends = { "MunifTanjim/nui.nvim" }
+  })
+
+  require('hardtime').setup({})
+end)
+
+now_if_args(function()
+  add({
+    source = 'nvim-neo-tree/neo-tree.nvim',
+    checkout = 'v3.x',
+    depends = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons", -- optional, but recommended
+    }
+  })
+end)
