@@ -51,6 +51,7 @@ now_if_args(function()
     'vimdoc',
     'markdown',
     'python',
+    'swift',
     -- Add here more languages with which you want to use tree-sitter
     -- To see available languages:
     -- - Execute `:=require('nvim-treesitter').get_available()`
@@ -90,10 +91,11 @@ end)
 --
 -- Add it now if file (and not 'mini.starter') is shown after startup.
 
-now_if_args(function()
+now(function()
   add('neovim/nvim-lspconfig')
   add('mason-org/mason.nvim')
   add('mason-org/mason-lspconfig.nvim')
+  add('WhoIsSethDaniel/mason-tool-installer.nvim')
   -- Use `:h vim.lsp.enable()` to automatically enable language server based on
   -- the rules provided by 'nvim-lspconfig'.
   -- Use `:h vim.lsp.config()` or 'after/lsp/' directory to configure servers.
@@ -103,6 +105,9 @@ now_if_args(function()
   -- })
   require('mason').setup()
   require('mason-lspconfig').setup()
+  require('mason-tool-installer').setup({
+     ensure_installed = {'lua_ls', 'pyrefly'}
+  })
 end)
 
 -- Formatting =================================================================
