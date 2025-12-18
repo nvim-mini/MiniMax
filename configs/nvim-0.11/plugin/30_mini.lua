@@ -370,7 +370,15 @@ later(function()
   -- Don't show 'Text' suggestions (usually noisy) and show snippets last.
   local process_items_opts = { kind_priority = { Text = -1, Snippet = 99 } }
   local process_items = function(items, base)
-    return MiniCompletion.default_process_items(items, base, process_items_opts)
+    local res = MiniCompletion.default_process_items(items, base, process_items_opts)
+    for _, item in ipairs(res) do
+      local label = item.label
+      if label and #label > 25 then
+        item.insertText = item.insertText or item.label
+        item.label = label:sub(1, 24) .. "…"
+      end
+    end
+    return res
   end
   require('mini.completion').setup({
     lsp_completion = {
