@@ -106,8 +106,12 @@ now(function()
   require('mason').setup()
   require('mason-lspconfig').setup()
   require('mason-tool-installer').setup({
-     ensure_installed = {'lua_ls', 'pyrefly'}
+    ensure_installed = { 'lua_ls', 'pyrefly' }
   })
+end)
+
+later(function()
+  vim.lsp.enable('sourcekit')
 end)
 
 -- Formatting =================================================================
