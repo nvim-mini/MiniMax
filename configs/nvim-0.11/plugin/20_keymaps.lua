@@ -101,6 +101,16 @@ local edit_plugin_file = function(filename)
   return string.format('<Cmd>edit %s/plugin/%s<CR>', vim.fn.stdpath('config'), filename)
 end
 local explore_at_file = '<Cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>'
+local explore_loclist = function()
+  local loclist = vim.fn.getloclist(vim.api.nvim_get_current_win(), { id = 0, winid = 0 })
+  if loclist.winid > 0 then
+    vim.cmd('lclose')
+  elseif loclist.id > 0 then
+    vim.cmd('lopen')
+  else
+    vim.notify('No location list for this window', vim.log.levels.INFO)
+  end
+end
 local explore_quickfix = function()
   for _, win_id in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
     local winfo = vim.fn.getwininfo(win_id)[1]
@@ -115,6 +125,7 @@ nmap_leader('ed', '<Cmd>lua MiniFiles.open()<CR>',          'Directory')
 nmap_leader('ef', explore_at_file,                          'File directory')
 nmap_leader('ei', '<Cmd>edit $MYVIMRC<CR>',                 'init.lua')
 nmap_leader('ek', edit_plugin_file('20_keymaps.lua'),       'Keymaps config')
+nmap_leader('el', explore_loclist,                          'Location list')
 nmap_leader('em', edit_plugin_file('30_mini.lua'),          'MINI config')
 nmap_leader('en', '<Cmd>lua MiniNotify.show_history()<CR>', 'Notifications')
 nmap_leader('eo', edit_plugin_file('10_options.lua'),       'Options config')
