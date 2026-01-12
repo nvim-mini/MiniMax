@@ -117,7 +117,7 @@ nmap_leader('en', '<Cmd>lua MiniNotify.show_history()<CR>', 'Notifications')
 nmap_leader('eo', edit_plugin_file('10_options.lua'),       'Options config')
 nmap_leader('ep', edit_plugin_file('40_plugins.lua'),       'Plugins config')
 nmap_leader('eq', explore_quickfix,                         'Quickfix')
-
+nmap_leader('et', '<Cmd>Neotree toggle<CR>',                'Toggle Neotree')
 -- f is for 'Fuzzy Find'. Common usage:
 -- - `<Leader>ff` - find files; for best performance requires `ripgrep`
 -- - `<Leader>fg` - find inside files; requires `ripgrep`
