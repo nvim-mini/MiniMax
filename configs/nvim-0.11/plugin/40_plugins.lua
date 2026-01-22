@@ -201,7 +201,7 @@ later(function()
   require('hardtime').setup({})
 end)
 
-now(function()
+now_if_args(function()
   add({
     source = 'nvim-neo-tree/neo-tree.nvim',
     checkout = 'v3.x',
