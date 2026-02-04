@@ -1,4 +1,6 @@
-## MiniMax configs
+## MiniMax reference configs
+
+The most appropriate one based on Neovim version is chosen during initial config generation.
 
 Available:
 

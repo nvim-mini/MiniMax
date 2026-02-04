@@ -51,6 +51,8 @@ now_if_args(function()
   })
 
   -- Define languages which will have parsers installed and auto enabled
+  -- After changing this, restart Neovim once to install necessary parsers. Wait
+  -- for the installation to finish before opening a file for added language(s).
   local languages = {
     'lua',
     'vimdoc',

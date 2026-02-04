@@ -2,14 +2,14 @@
 
 ## Neovim with maximum MINI
 
-MiniMax is a collection of fully working self-contained Neovim configs. All of the them:
+MiniMax is a Neovim config generator. After [running a script](#setting-up), your config will:
 
-- Use mostly MINI to showcase its capabilities.
+- Be primarily based on the 'mini.nvim' modules for a coherent, powerful, and flexible setup.
 - Provide out of the box a stable, polished, and feature rich Neovim experience.
-- Share minimal structure with potential to build upon.
-- Contain extensively commented config files meant to be read.
+- Have minimal structure with potential to build upon.
+- Contain extensively commented files meant to be read.
 
-It can be automatically [set up](#setting-up), which uses the best suited config from [available ones](configs).
+Explore [reference configs](configs). The most appropriate one is picked during generation based on Neovim version.
 
 See [change log](CHANGELOG.md) for a history of changes.
 
@@ -92,11 +92,11 @@ Notes:
 
 - If there are messages about backed up files during setup, it means the target config directory already contained files that are meant to come from MiniMax. Previous files were moved to `MiniMax-backup` directory. Review/restore them and delete the whole backup directory.
 
-- You can explore [MiniMax](configs) manually to find which (parts of) config examples suit you best. Read through the relevant config example (starting at 'init.lua') and use interesting parts in your already existing config.
+- You can explore [MiniMax](configs) manually to find which (parts of) reference configs suit you best. Read through the relevant config example (starting at 'init.lua') and use interesting parts in your already existing config.
 
 ### Updating
 
-MiniMax doesn't provide fully automatic updates of an already set up config. The recommended approach is to manually explore [configs](configs) and [change log](CHANGELOG.md) to see the changes.
+MiniMax doesn't provide fully automatic updates of an already set up config. The recommended approach is to manually explore [reference configs](configs) and [change log](CHANGELOG.md) to see the changes.
 
 The closest approach to automatic updating is:
 

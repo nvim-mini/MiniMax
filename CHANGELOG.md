@@ -1,3 +1,9 @@
+## 2026-01-29
+
+- Update 'mini.completion' setup to use `now_if_args` instead of `later`. Otherwise it doesn't set proper omnifunc for files opened during startup (because necessary `LspAttach` events are already triggered).
+
+- Move setting up 'mini.nvim' modules that need `now_if_args` in a separate "Step one or two" section.
+
 ## 2026-01-13
 
 - Improve 'stevearc/conform.nvim' setup:
