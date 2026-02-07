@@ -199,7 +199,9 @@ later(function()
     depends = { "MunifTanjim/nui.nvim" }
   })
 
-  require('hardtime').setup({})
+  require('hardtime').setup({
+    enabled = false
+  })
 end)
 
 later(function()
