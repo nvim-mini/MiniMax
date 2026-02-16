@@ -443,7 +443,7 @@ later(function() require('mini.diff').setup() end)
 -- - `:h MiniFiles-navigation` - more details about how to navigate
 -- - `:h MiniFiles-manipulation` - more details about how to manipulate
 -- - `:h MiniFiles-examples` - examples of common setups
-now(function()
+now_if_args(function()
   -- Enable directory/file preview
   require('mini.files').setup({ windows = { preview = true } })
 
