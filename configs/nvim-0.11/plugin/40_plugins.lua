@@ -42,8 +42,14 @@ now_if_args(function()
     source = 'nvim-treesitter/nvim-treesitter',
     -- Update tree-sitter parser after plugin is updated
     hooks = { post_checkout = function() vim.cmd('TSUpdate') end },
+    -- Pin to the commit just before the plugin dropped Neovim=0.11 support
+    checkout = '90cd6580e720caedacb91fdd587b747a6e77d61f',
   })
-  add('nvim-treesitter/nvim-treesitter-textobjects')
+  add({
+    source = 'nvim-treesitter/nvim-treesitter-textobjects',
+    -- Pin to the commit corresponding to 'nvim-treesitter' commit
+    checkout = '93d60a475f0b08a8eceb99255863977d3a25f310',
+  })
 
   -- Define languages which will have parsers installed and auto enabled
   -- After changing this, restart Neovim once to install necessary parsers. Wait
