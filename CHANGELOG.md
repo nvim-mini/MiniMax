@@ -1,3 +1,7 @@
+## 2026-10-24
+
+- Suggest using the updated `minischeme` color scheme.
+
 ## 2026-09-29
 
 - Start using 'mini.statuscolumn'.
