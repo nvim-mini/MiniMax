@@ -13,7 +13,7 @@ Explore [reference configs](configs). The most appropriate one is picked during 
 
 See [change log](CHANGELOG.md) for a history of changes.
 
-If you find this project useful, please consider leaving a Github star.
+If you find this project useful, please consider leaving a star on any [supported code forge](#setting-up).
 
 ### How it looks
 
@@ -85,7 +85,13 @@ NVIM_APPNAME=nvim-minimax nvim
 
 Notes:
 
-- MiniMax project can be downloaded manually (like via GitHub UI).
+- This project is hosted on several code forges (use preferred link in the first "Download" step):
+
+    - https://github.com/nvim-mini/MiniMax (main)
+    - https://tangled.org/nvim-mini.org/MiniMax (mirror)
+    - https://codeberg.org/nvim-mini/MiniMax (mirror)
+
+- MiniMax project can be downloaded manually (like via code forge UI).
 
 - With `NVIM_APPNAME=nvim-minimax` config directory is '\~/.config/nvim-minimax' on Unix and '\~/AppData/Local/nvim-minimax' on Windows.
 
