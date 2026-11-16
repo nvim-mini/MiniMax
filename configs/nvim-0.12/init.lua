@@ -97,6 +97,10 @@ end
 -- 'mini.nvim' - all-in-one plugin powering most MiniMax features.
 -- See 'plugin/30_mini.lua' for how it is used.
 -- Load now to have 'mini.misc' available for custom loading helpers.
+-- Mirrors outside of Github are also available (replace URL with one of them,
+-- will take effect during the first plugin update with `vim.pack`):
+-- - https://tangled.org/nvim-mini.org/mini.nvim
+-- - https://codeberg.org/nvim-mini/mini.nvim
 vim.pack.add({ 'https://github.com/nvim-mini/mini.nvim' })
 
 -- Loading helpers used to organize config into fail-safe parts. Example usage:

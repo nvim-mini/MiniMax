@@ -47,6 +47,9 @@
 -- - `:SomeCommand ...` or `:lua ...` means execute mentioned command.
 
 -- Bootstrap 'mini.nvim' manually in a way that it gets managed by 'mini.deps'
+-- Mirrors outside of Github are also available (replace URL with one of them):
+-- - https://tangled.org/nvim-mini.org/mini.nvim
+-- - https://codeberg.org/nvim-mini/mini.nvim
 local mini_path = vim.fn.stdpath('data') .. '/site/pack/deps/start/mini.nvim'
 if not vim.loop.fs_stat(mini_path) then
   vim.cmd('echo "Installing `mini.nvim`" | redraw')
