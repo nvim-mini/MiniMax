@@ -57,8 +57,8 @@
 -- installed plugins is recorded in the lockfile named 'nvim-pack-lock.json'.
 -- Example usage:
 -- - `vim.pack.add({ ... })` - use inside config to add one or more plugins.
--- - `:lua vim.pack.update()` - update all plugins; execute `:write` to confirm.
--- - `:lua vim.pack.del({ ... })` - delete specific plugins.
+-- - `:packupdate` - update all plugins; execute `:write` to confirm.
+-- - `:packdel {name}` - delete plugin `{name}`.
 --
 -- See also:
 -- - `:h vim.pack-examples` - how to use it
